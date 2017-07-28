@@ -1,3 +1,7 @@
+{% set nodes = [] %}
+{% for n in range(aws.nodes) %}
+  {% set _ = nodes.append(node_list[n]) %}
+{% endfor %}
 {
   "name": "Ouroboros",
   "engine": {
@@ -6,9 +10,9 @@
         "gasLimitBoundDivisor": "0x400",
         "stepDuration": "5",
         "securityParameterK": "60",
-        "networkWideStartTime": "$NETWORK_WIDE_START_TIME",
+        "networkWideStartTime": "0x{{ STARTTIME }}",
         "validators": {
-          "list": "$ARRAY_OF_INSTANCE_ADDRESSES"
+          "list": ["{{ nodes|join("\", \"") }}"]
         }
       }
     }

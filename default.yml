@@ -1,7 +1,0 @@
-variables:
-  projectname: ouroboros
-  aws:
-    concurrency: 4
-    nodes: 4
-#    type: c4.2xlarge
-    region: us-east-1
