@@ -2,3 +2,4 @@ Notes/
 runner/parity/out/
 runner/parity/chain-spec.json
 runner/globals.sh
+runner/parity/config.toml

@@ -6,7 +6,7 @@ WORKDIR /parity
 EXPOSE 30300 8540 8180 8080
 
 COPY passwords /parity/
-COPY config.toml /parity/
+COPY initial-config.toml /parity/
 COPY chain-spec.json /parity/
 COPY out/parity /parity/
 
