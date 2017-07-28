@@ -2,7 +2,7 @@
 source ./globals.sh
 
 PARAMS="$@"
-CMD='MACHINE={}; \
+CMD='export MACHINE={}; \
   echo "Machine {}"; \
   echo "Cmd: '$PARAMS'"; \
   docker-compose $(docker-machine config $MACHINE) '$PARAMS''

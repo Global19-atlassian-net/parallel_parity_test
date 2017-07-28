@@ -1,3 +1,7 @@
+#!/bin/bash
+{% for n in range(aws.nodes) %}
+
+cat > {{ projectname }}-node{{ n }}.toml << EOF
 [parity]
 chain = "chain-spec.json"
 base_path = "node"
@@ -24,6 +28,9 @@ disable = true
 password = ["passwords"]
 
 [mining]
-engine_signer = "0x00aa39d30f0d20ff03a22ccfc30b7efbfca597c2"
+engine_signer = "{{ node_list[n] }}"
 reseal_on_txs = "none"
 usd_per_tx = "0"
+EOF
+
+{% endfor %}
