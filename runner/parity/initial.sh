@@ -1,2 +1,2 @@
 #!/bin/bash
-./parity --config initial-config.toml
+./out/parity --config initial-config.toml
