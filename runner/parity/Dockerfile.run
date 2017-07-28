@@ -1,4 +1,9 @@
 FROM centos
 
-COPY out/parity /
+RUN mkdir /parity
+WORKDIR /parity
+
+COPY config.toml /parity/
+COPY chain-spec.json /parity/
+COPY out/parity /parity/
 
