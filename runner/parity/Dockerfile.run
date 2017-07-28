@@ -15,6 +15,7 @@ COPY chain-spec.json /parity/
 COPY out/parity /parity/
 COPY non_stakeholder_setup.json /parity/
 COPY stakeholder_setup.json /parity/
+COPY run_curl.sh /parity
 
 ENTRYPOINT ["./parity","--config"]
 CMD config.toml
