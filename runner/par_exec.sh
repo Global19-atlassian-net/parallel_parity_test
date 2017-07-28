@@ -9,7 +9,7 @@ source ./globals.sh
 }
   
 echo "Please wait while instances are being spawned (par jobs: $PARALLEL_CONCURRENCY )"
-parallel --dry-run -v --eta -j $PARALLEL_CONCURRENCY time \
+parallel --dry-run -v --eta -j $PARALLEL_CONCURRENCY \
   docker-machine create --driver amazonec2 ::: $NODES
   
   

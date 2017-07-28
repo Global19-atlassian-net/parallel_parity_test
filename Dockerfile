@@ -32,11 +32,13 @@ RUN yum -y install \
 RUN export PATH=$PATH:/root/.cargo/bin && \
     cargo install parallel
   
-RUN yum install -y yum-utils device-mapper-persistent-data lvm2
-RUN yum-config-manager \
+RUN yum install -y yum-utils device-mapper-persistent-data lvm2 && \
+ yum-config-manager \
     --add-repo \
-    https://download.docker.com/linux/centos/docker-ce.repo
-RUN yum makecache fast
-RUN yum install -y docker-ce      
-  
+    https://download.docker.com/linux/centos/docker-ce.repo && \
+ yum makecache fast && \
+ yum install -y docker-ce      
+
+VOLUME /shared  
+
 CMD bash

@@ -5,3 +5,4 @@ AWS_DEFAULT_REGION={{ aws.region }}
 AWS_INSTANCE_TYPE={{ aws.type }}
 {% endif %}
 PARALLEL_CONCURRENCY={{ aws.concurrency }}
+PATH=$PATH:/root/.cargo/bin:/usr/local/bin
