@@ -9,11 +9,5 @@ cd $DIR
 export STARTTIME=$(printf "%x" $(($(date +%s) + $OFFSET)))
 mini
 
-cd $DIR/parity 
-parallel -v -j $PARALLEL_CONCURRENCY \
-  "$CMD" ::: $NODES
-
-
-docker-compose -p $PROJECT up -d
-
-#$DIR/docker_cmd.sh build -t parity -f parity/Dockerfile.run parity/
+$DIR/docker_compose_cmd.sh -f parity/docker-compose.yml build
+$DIR/docker_compose_cmd.sh -f parity/docker-compose.yml up -d

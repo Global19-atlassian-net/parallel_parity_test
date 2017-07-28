@@ -5,8 +5,8 @@ variables:
   projectname: ouroboros
   time_offset: 300
   aws:
-    concurrency: 4
-    nodes: 4
+    concurrency: 2
+    nodes: 2
 #    type: c4.2xlarge
     region: us-east-1
   node_list:
