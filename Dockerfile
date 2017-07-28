@@ -39,6 +39,8 @@ RUN yum install -y yum-utils device-mapper-persistent-data lvm2 && \
  yum makecache fast && \
  yum install -y docker-ce      
 
-VOLUME /shared  
+VOLUME /shared
 
+COPY . /working
+WORKDIR /working  
 CMD bash
