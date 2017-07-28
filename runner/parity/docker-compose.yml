@@ -5,10 +5,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.run
-  ports:
-    - 30300:30300
-    - 8540:8540
-    - 8180:8180
-    - 8080:8080
+    ports:
+      - 30300:30300
+      - 8540:8540
+      - 8180:8180
+      - 8080:8080
 
 
