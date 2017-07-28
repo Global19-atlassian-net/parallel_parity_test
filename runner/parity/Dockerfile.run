@@ -1,5 +1,9 @@
 FROM centos
 
+RUN yum -y install epel-release && \
+  yum -y install \
+   curl
+
 RUN mkdir /parity
 WORKDIR /parity
 
@@ -9,6 +13,8 @@ COPY passwords /parity/
 COPY initial-config.toml /parity/
 COPY chain-spec.json /parity/
 COPY out/parity /parity/
+COPY non_stakeholder_setup.json /parity/
+COPY stakeholder_setup.json /parity/
 
 ENTRYPOINT ["./parity","--config"]
 CMD config.toml

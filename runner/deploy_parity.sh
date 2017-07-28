@@ -1,4 +1,5 @@
 #!/bin/bash
+mini
 source ./globals.sh
 
 set -e
