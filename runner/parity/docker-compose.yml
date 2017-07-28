@@ -10,5 +10,6 @@ services:
       - 8540:8540
       - 8180:8180
       - 8080:8080
+    command: ${DC_COMMAND}
 
 

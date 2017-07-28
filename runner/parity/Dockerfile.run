@@ -10,4 +10,5 @@ COPY config.toml /parity/
 COPY chain-spec.json /parity/
 COPY out/parity /parity/
 
-CMD ./parity --config config.toml
+ENTRYPOINT ["./parity","--config"]
+CMD  config.toml
