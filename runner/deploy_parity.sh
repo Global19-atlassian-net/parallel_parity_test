@@ -9,4 +9,6 @@ cd $DIR
 export STARTTIME=$(printf "%x" $(($(date +%s) + $OFFSET)))
 mini
 
-$DIR/docker_cmd.sh build -t parity -f parity/Dockerfile.run parity/
+cd $DIR/parity docker-compose -p $PROJECT up -d
+
+#$DIR/docker_cmd.sh build -t parity -f parity/Dockerfile.run parity/

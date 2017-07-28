@@ -10,3 +10,5 @@ mkdir -p out
 docker run --rm --name parity_builder parity_builder
 
 docker build -f Dockerfile.run -t parity .
+
+docker-compose 

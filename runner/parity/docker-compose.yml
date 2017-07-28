@@ -1,0 +1,14 @@
+version: '2'
+services:
+  parity:
+    image: parity
+    build:
+      context: .
+      dockerfile: Dockerfile.run
+  ports:
+    - 30300:30300
+    - 8540:8540
+    - 8180:8180
+    - 8080:8080
+
+
