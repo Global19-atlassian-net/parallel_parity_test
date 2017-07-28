@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile.run
     environment:
-      - NODENAME=${NODENAME}
+      - NODENAME=${MACHINE}
     ports:
       - 30300:30300
       - 8540:8540
