@@ -13,3 +13,9 @@ $DIR/docker_compose_cmd.sh -f parity/docker-compose.yml build
 
 export DC_COMMAND="initial-config.toml"
 $DIR/docker_compose_cmd.sh -f parity/docker-compose.yml up -d
+
+#FIXME: Is this necesarry?
+sleep 5
+
+
+
