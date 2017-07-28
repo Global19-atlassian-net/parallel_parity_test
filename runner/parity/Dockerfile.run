@@ -3,6 +3,7 @@ FROM centos
 RUN mkdir /parity
 WORKDIR /parity
 
+COPY passwords /parity/
 COPY config.toml /parity/
 COPY chain-spec.json /parity/
 COPY out/parity /parity/
