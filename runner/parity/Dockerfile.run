@@ -3,7 +3,7 @@ FROM centos
 RUN mkdir /parity
 WORKDIR /parity
 
-EXPOSE [30300,8540,8180,8080]
+EXPOSE 30300 8540 8180 8080
 
 COPY passwords /parity/
 COPY config.toml /parity/
