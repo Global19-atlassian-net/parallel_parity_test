@@ -42,6 +42,10 @@ cat > ouroboros-node0/passwords << EOF
 node0
 EOF
 
+cat > ouroboros-node0/address << EOF
+export ADDRESS="0x00bd138abd70e2f00903268f3db08f2d25677c9e"
+EOF
+
 
 mkdir -p ouroboros-node1
 
@@ -83,5 +87,9 @@ EOF
 
 cat > ouroboros-node1/passwords << EOF
 node1
+EOF
+
+cat > ouroboros-node1/address << EOF
+export ADDRESS="0x00aa39d30f0d20ff03a22ccfc30b7efbfca597c2"
 EOF
 

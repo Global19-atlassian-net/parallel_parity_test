@@ -43,4 +43,8 @@ cat > {{ projectname }}-node{{ n }}/passwords << EOF
 node{{ n }}
 EOF
 
+cat > {{ projectname }}-node{{ n }}/address << EOF
+export ADDRESS="{{ node_list[n] }}"
+EOF
+
 {% endfor %}

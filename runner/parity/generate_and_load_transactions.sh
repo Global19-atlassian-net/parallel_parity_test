@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source /parity/address
+
 /parity-setup/target/release/parity-rpc-generator --config rpc-generator-config.json --seed $RANDSEED --output /tmp/par
 
 for i in /tmp/par*
