@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.run
+    network_mode: "host"      
     environment:
       - NODENAME=${MACHINE}
     ports:
