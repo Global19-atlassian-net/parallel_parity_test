@@ -3,7 +3,7 @@ evariables:
 
 variables:
   rand_seed: 432753976
-  transactions: 2000
+  transactions: 10
   chunks: 10
   projectname: ouroboros
   time_offset: 30
