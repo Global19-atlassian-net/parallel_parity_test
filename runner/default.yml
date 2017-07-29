@@ -4,7 +4,7 @@ evariables:
 variables:
   projectname: ouroboros
   time_offset: 30
-  parity_port: 8541
+  parity_port: 8540
   aws:
     concurrency: 2
     nodes: 2
