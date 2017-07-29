@@ -9,4 +9,4 @@ cd $DIR
 source ./globals.sh
 
 export DC_COMMAND="./initial.sh"
-$DIR/docker_compose_cmd.sh -f parity/docker-compose.yml up -d
+$DIR/docker_compose_cmd.sh -f parity/docker-compose.yml up --force-recreate -d

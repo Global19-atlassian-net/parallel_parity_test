@@ -9,6 +9,8 @@ WORKDIR /parity
 
 EXPOSE 30300 8540 8180 8080
 
+ENV refresh_on 29 Jul 2017
+
 COPY . /parity/
 
 VOLUME /parity
