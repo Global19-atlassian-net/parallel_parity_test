@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Running initial..."
+
 set -e
 cd /parity
 
