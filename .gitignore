@@ -1,4 +1,5 @@
 Notes/
+runner/notify_nodes.sh
 runner/globals.sh
 runner/parity/out/
 runner/parity/chain-spec.json

@@ -34,8 +34,12 @@ reseal_on_txs = "none"
 usd_per_tx = "0"
 EOF
 
-cat > ouroboros-node0/stakeholdersetup.json << EOF
+cat > ouroboros-node0/stakeholder_setup.json << EOF
 {"jsonrpc":"2.0","method":"parity_newAccountFromPhrase","params":["node0", "node0"],"id":0}
+EOF
+
+cat > ouroboros-node0/passwords << EOF
+node0
 EOF
 
 
@@ -73,7 +77,11 @@ reseal_on_txs = "none"
 usd_per_tx = "0"
 EOF
 
-cat > ouroboros-node1/stakeholdersetup.json << EOF
+cat > ouroboros-node1/stakeholder_setup.json << EOF
 {"jsonrpc":"2.0","method":"parity_newAccountFromPhrase","params":["node1", "node1"],"id":0}
+EOF
+
+cat > ouroboros-node1/passwords << EOF
+node1
 EOF
 
