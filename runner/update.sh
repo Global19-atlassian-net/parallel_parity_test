@@ -9,3 +9,5 @@ export STARTTIME=$(printf "%x" $(($(date +%s) + 300)))
 
 mini
 
+chmod u+x deploy_*.sh
+
