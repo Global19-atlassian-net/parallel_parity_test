@@ -2,6 +2,7 @@ evariables:
   - STARTTIME
 
 variables:
+  rand_seed: 432753976
   projectname: ouroboros
   time_offset: 30
   parity_port: 8540

@@ -8,7 +8,10 @@
       "id": "{{ node_list[n] }}",
       "balance": "1000000",
       "password": "node{{ n }}"
-    },
+    }
+{%- if n != aws.nodes-1 %}
+,
+{%- endif %}     
 {% endfor %}    
   ]
 }

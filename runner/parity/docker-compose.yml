@@ -8,6 +8,7 @@ services:
     network_mode: "host"      
     environment:
       - NODENAME=${MACHINE}
+      - RANDSEED=${RANDSEED}
     ports:
       - 30300:30300
       - 8540:8540
