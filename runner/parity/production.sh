@@ -1,2 +1,3 @@
 #!/bin/bash
-./out/parity --config generated_configs/$NODENAME.toml
+cp generated_configs $NODENAME.toml config.toml
+./out/parity --config config.toml
