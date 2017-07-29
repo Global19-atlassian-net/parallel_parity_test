@@ -1,15 +1,11 @@
 #!/bin/bash
-mini
-source ./globals.sh
-
 set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $DIR
+./update.sh
 
-export STARTTIME=$(printf "%x" $(($(date +%s) + $OFFSET)))
-
-mini
+source ./globals.sh
 
 cd $DIR/parity/generated_configs
 chmod u+x ./bulk_configs.sh
