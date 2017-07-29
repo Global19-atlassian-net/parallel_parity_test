@@ -39,4 +39,8 @@ cat > {{ projectname }}-node{{ n }}/stakeholder_setup.json << EOF
 {"jsonrpc":"2.0","method":"parity_newAccountFromPhrase","params":["node{{ n }}", "node{{ n }}"],"id":0}
 EOF
 
+cat > {{ projectname }}-node{{ n }}/passwords << EOF
+node{{ n }}
+EOF
+
 {% endfor %}
