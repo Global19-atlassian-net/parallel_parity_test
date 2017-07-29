@@ -11,8 +11,8 @@ CMD='MACHINE={}; \
   
 echo $CMD  
   
-# parallel -v -j $PARALLEL_CONCURRENCY \
-#   "$CMD" ::: $NODES
+parallel -v -j $PARALLEL_CONCURRENCY \
+  "$CMD" ::: $NODES
   
   
 
