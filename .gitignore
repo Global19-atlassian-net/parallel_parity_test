@@ -3,5 +3,5 @@ runner/globals.sh
 runner/parity/out/
 runner/parity/chain-spec.json
 runner/parity/config.toml
-runner/parity/generated_configs/*/
 runner/parity/generated_configs/bulk_configs.sh
+runner/parity/generated_configs/ouro*
