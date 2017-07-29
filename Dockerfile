@@ -4,6 +4,7 @@ RUN yum -y install epel-release && \
   yum -y install \
    curl \
    git \
+   jq \
    python-pip \
    && \
   yum clean all
