@@ -5,14 +5,14 @@ source ./globals.sh
 FILENAME="$@"
 CMD='MACHINE={}; \
   echo "Machine {}"; \
-  echo "Cmd: '$PARAMS'"; \
+  echo "PAYLOAD: '$CURL_PAYLOAD'"; \
   IP=$(docker-machine ip $MACHINE); \
-  curl --data @'$FILENAME' -H "Content-Type: application/json" -X POST $IP:'$PARITY_PORT''
+  curl --data "'$CURL_PAYLOAD'" -H "Content-Type: application/json" -X POST $IP:'$PARITY_PORT''
   
 echo $CMD  
   
-parallel -v -j $PARALLEL_CONCURRENCY \
-  "$CMD" ::: $NODES
+# parallel -v -j $PARALLEL_CONCURRENCY \
+#   "$CMD" ::: $NODES
   
   
 
