@@ -13,4 +13,5 @@ chmod u+x ./bulk_configs.sh
 cd $DIR
 
 $DIR/docker_compose_cmd.sh -f parity/docker-compose.yml build
+$DIR/docker_compose_cmd.sh -f parity/docker-compose.yml stop
 $DIR/docker_compose_cmd.sh -f parity/docker-compose.yml rm -f 
