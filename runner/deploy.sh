@@ -15,7 +15,7 @@ sleep 5
 sleep 5
 
 ./deploy_4_production_mode.sh
-sleep 5
+sleep 20
 
 ./deploy_5_notify_nodes.sh
 sleep 5

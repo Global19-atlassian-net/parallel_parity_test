@@ -2,7 +2,7 @@
 
 source /parity/address
 
-/parity-setup/target/release/parity-rpc-generator --config rpc-generator-config.json --seed $RANDSEED --filter-from $ADDRESS --transactions $TRANSACTIONS --chunks $CHUNKS --output /tmp/par
+/parity-setup/target/release/parity-rpc-generator --config rpc-generator-config.json --seed $RANDSEED --filter-from $ADDRESS --transactions $TRANSACTIONS --chunk-size $CHUNKS --output /tmp/par
 
 for i in /tmp/par*
 do 
