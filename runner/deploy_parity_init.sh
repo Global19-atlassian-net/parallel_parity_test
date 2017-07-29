@@ -11,9 +11,6 @@ export STARTTIME=$(printf "%x" $(($(date +%s) + $OFFSET)))
 
 mini
 
-cat parity/chain-spec.json
-exit 1
-
 cd $DIR/parity/generated_configs
 chmod u+x ./bulk_configs.sh
 ./bulk_configs.sh
