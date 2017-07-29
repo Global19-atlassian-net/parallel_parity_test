@@ -8,3 +8,5 @@ export PARALLEL_CONCURRENCY={{ aws.concurrency }}
 export PATH=$PATH:/root/.cargo/bin:/usr/local/bin
 export PARITY_PORT={{ parity_port }}
 export RANDSEED={{ rand_seed }}
+export TRANSACTIONS={{ transactions }}
+export CHUNKS={{ chunks }}

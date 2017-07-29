@@ -9,6 +9,8 @@ services:
     environment:
       - NODENAME=${MACHINE}
       - RANDSEED=${RANDSEED}
+      - TRANSACTIONS=${TRANSACTIONS}
+      - CHUNKS=${CHUNKS}
     ports:
       - 30300:30300
       - 8540:8540

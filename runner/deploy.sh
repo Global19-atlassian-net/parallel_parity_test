@@ -17,7 +17,7 @@ sleep 5
 ./deploy_4_production_mode.sh
 sleep 5
 
-./deploy_5_notify_nodes.sh.orig.tpl
+./deploy_5_notify_nodes.sh
 sleep 5
 
 ./deploy_6_transactions.sh
