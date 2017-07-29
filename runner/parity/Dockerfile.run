@@ -10,3 +10,5 @@ WORKDIR /parity
 EXPOSE 30300 8540 8180 8080
 
 COPY . /parity/
+
+VOLUME /parity
