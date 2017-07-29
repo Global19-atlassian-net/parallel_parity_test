@@ -9,13 +9,4 @@ WORKDIR /parity
 
 EXPOSE 30300 8540 8180 8080
 
-# COPY out/parity /parity/
-# COPY passwords /parity/
-# COPY initial-config.toml /parity/
-# COPY chain-spec.json /parity/
-# COPY non_stakeholder_setup.json /parity/
-# COPY stakeholder_setup.json /parity/
-# COPY run_curl.sh /parity
-# COPY *.sh /pari
-
 COPY . /parity/

@@ -1,7 +1,9 @@
 #!/bin/bash
 {% for n in range(aws.nodes) %}
 
-cat > {{ projectname }}-node{{ n }}.toml << EOF
+mkdir -p {{ projectname }}-node{{ n }}
+
+cat > {{ projectname }}-node{{ n }}/config.toml << EOF
 [parity]
 chain = "chain-spec.json"
 base_path = "node"
@@ -31,6 +33,10 @@ password = ["passwords"]
 engine_signer = "{{ node_list[n] }}"
 reseal_on_txs = "none"
 usd_per_tx = "0"
+EOF
+
+cat > {{ projectname }}-node{{ n }}/stakeholder_setup.json << EOF
+{"jsonrpc":"2.0","method":"parity_newAccountFromPhrase","params":["node{{ n }}", "node{{ n }}"],"id":0}
 EOF
 
 {% endfor %}
