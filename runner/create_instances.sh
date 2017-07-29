@@ -8,7 +8,7 @@ source ./globals.sh
 }
 
 parallel -v -j $PARALLEL_CONCURRENCY \
-  docker-machine create --driver amazonec2 ::: $NODES
+  docker-machine create --driver amazonec2 --amazonec2-open-port 8540 ::: $NODES
   
   
 

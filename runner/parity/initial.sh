@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -e
+cd /parity
+
 # Some last minute per-node setup
 cp generated_configs/$NODENAME/* .
 
