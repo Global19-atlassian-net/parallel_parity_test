@@ -8,8 +8,4 @@ cd $DIR
 source ./globals.sh
 
 ./docker_cmd.sh exec parity_parity_1 /parity/run_curl.sh stakeholder_setup
-sleep 2
-
-./docker_cmd.sh exec parity_parity_1 /parity/run_curl.sh non_stakeholder_setup
-sleep 2
 
