@@ -1,8 +1,12 @@
 #!/bin/bash
-mini
-source ./globals.sh
 
-FILENAME="$@"
+CMD='MACHINE={}; \
+     IP=$(docker-machine ip $MACHINE); \
+     echo "$IP"'
+     
+parallel -v -j $PARALLEL_CONCURRENCY \
+  "$CMD" ::: $NODES     
+
 CMD='MACHINE={}; \
   echo "Machine {}"; \
   echo "PAYLOAD: '$CURL_PAYLOAD'"; \
@@ -10,7 +14,7 @@ CMD='MACHINE={}; \
   curl --data "'$CURL_PAYLOAD'" -H "Content-Type: application/json" -X POST $IP:'$PARITY_PORT''
   
 echo $CMD  
-  
+
 parallel -v -j $PARALLEL_CONCURRENCY \
   "$CMD" ::: $NODES
   
