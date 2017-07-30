@@ -3,6 +3,7 @@ runner/notify_nodes.sh
 runner/globals.sh
 runner/deploy_5_notify_nodes.sh
 runner/parity/out/
+runner/parity/Dockerfile
 runner/parity/chain-spec.json
 runner/parity/config.toml
 runner/parity/generated_configs/bulk_configs.sh

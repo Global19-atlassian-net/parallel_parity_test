@@ -2,7 +2,12 @@ evariables:
   - STARTTIME
 
 variables:
+  rust_ver: 1.18.0
   rand_seed: 432753976
+  #Don't comment the following key, leave blank or add values
+  ouroboros:
+#    stepDuration: 3
+#    securityParameterK: 10
   transactions: 10
   chunks: 10
   projectname: ouroboros

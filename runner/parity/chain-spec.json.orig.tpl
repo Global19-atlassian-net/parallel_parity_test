@@ -8,8 +8,8 @@
     "ouroboros": {
       "params": {
         "gasLimitBoundDivisor": "0x400",
-        "stepDuration": "5",
-        "securityParameterK": "60",
+        "stepDuration": "{{ ouroboros.stepDuration|default(5,true) }}",
+        "securityParameterK": "{{ ouroboros.securityParameterK|default(60,true) }}",
         "networkWideStartTime": "0x{{ STARTTIME }}",
         "validators": {
           "list": ["{{ nodes|join("\", \"") }}"]
