@@ -33,6 +33,7 @@ password = ["passwords"]
 engine_signer = "{{ node_list[n] }}"
 reseal_on_txs = "none"
 usd_per_tx = "0"
+force_sealing = true
 EOF
 
 cat > {{ projectname }}-node{{ n }}/stakeholder_setup.json << EOF
