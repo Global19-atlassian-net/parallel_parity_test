@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[ -f rm /tmp/running_transactions ] && {
+[ -f /tmp/running_transactions ] && {
   echo "Already running, please wait..."  
   exit 0
 }
