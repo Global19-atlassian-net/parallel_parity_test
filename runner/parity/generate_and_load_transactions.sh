@@ -6,6 +6,6 @@ if [[ ! -f /tmp/running_transactions ]] && {
 }
 
 echo "Launching..."
-nohup /parity/generate_and_load_transactions.sh&
+nohup /parity/generate_and_load_transactions.sh &
 
 
