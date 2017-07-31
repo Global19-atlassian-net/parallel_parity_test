@@ -1,11 +1,10 @@
 #!/bin/bash
 
-if [[ ! -f /tmp/running_transactions ]] && {
-  echo "Still running, please wait..."
-  exit 0
+[ -f rm /tmp/running_transactions ] && {
+  echo "Already running, please wait..."  
 }
 
 echo "Launching..."
-nohup /parity/generate_and_load_transactions.sh &
+nohup /parity/run_transactions.sh &
 
 
