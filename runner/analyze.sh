@@ -7,5 +7,10 @@ cd $DIR
 
 source ./globals.sh
 
-./docker_cmd.sh exec -d parity_parity_1 /parity/analyze_blocks.sh $1 $2
+[ -f /usr/local/bin/jq ] || {
+  curl -L https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64 > /usr/local/bin/jq
+  chmod a+x /usr/local/bin/jq
+}
+
+docker $(docker-machine config $PROJECT-node0) exec parity_parity_1 /parity/analyze_blocks.sh $1 $2 | tee analysis.csv
 
