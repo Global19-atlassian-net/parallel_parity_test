@@ -9,7 +9,7 @@ variables:
 #    pvssMethod: simple  
 #    stepDuration: 3
 #    securityParameterK: 10
-  transactions: 100
+  transactions: 10000
   chunks: 1000
   projectname: ouroboros
   time_offset: 30

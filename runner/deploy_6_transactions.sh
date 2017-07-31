@@ -7,5 +7,5 @@ cd $DIR
 
 source ./globals.sh
 
-./docker_cmd.sh exec parity_parity_1 /parity/generate_and_load_transactions.sh
+./docker_cmd.sh exec -d parity_parity_1 /parity/run_transactions.sh
 
