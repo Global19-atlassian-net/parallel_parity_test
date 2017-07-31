@@ -6,10 +6,11 @@ variables:
   rand_seed: 432753976
   #Don't comment the following key, leave blank or add values
   ouroboros:
+#    pvssMethod: simple  
 #    stepDuration: 3
 #    securityParameterK: 10
-  transactions: 10
-  chunks: 10
+  transactions: 100
+  chunks: 1000
   projectname: ouroboros
   time_offset: 30
   parity_port: 8540

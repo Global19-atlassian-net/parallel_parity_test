@@ -5,4 +5,4 @@ echo "Running prod..."
 set -e
 cd /parity
 
-./out/parity --config config.toml
+./out/parity --config config.toml --logging=engine=info

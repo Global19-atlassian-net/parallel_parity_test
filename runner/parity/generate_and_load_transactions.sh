@@ -1,13 +1,11 @@
 #!/bin/bash
 
-source /parity/address
+if [[ ! -f /tmp/running_transactions ]] && {
+  echo "Still running, please wait..."
+  exit 0
+}
 
-/parity-setup/target/release/parity-rpc-generator --config rpc-generator-config.json --seed $RANDSEED --filter-from $ADDRESS --transactions $TRANSACTIONS --chunk-size $CHUNKS --output /tmp/par
+echo "Launching..."
+nohup /parity/generate_and_load_transactions.sh&
 
-for i in /tmp/par*
-do 
-  echo $i
-  curl --data @${i} -H "Content-Type: application/json" -X POST localhost:8540
-done
 
-rm /tmp/par*
