@@ -1,5 +1,10 @@
 #!/bin/bash
 
+[ -f rm /tmp/running_transactions ] && {
+  echo "Already running, please wait..."  
+  exit 0
+}
+
 set -eu
 
 start=$1
