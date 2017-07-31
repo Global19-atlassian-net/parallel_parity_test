@@ -1,16 +1,11 @@
 #!/bin/bash
 
-[ -f rm /tmp/running_transactions ] && {
-  echo "Already running, please wait..."  
-  exit 0
-}
-
 set -eu
 
 start=$1
 end=$2
 
-parity_endpoint=${PARITY_ENDPOINT:-localhost:8541}
+parity_endpoint=${PARITY_ENDPOINT:-localhost:8540}
 
 for i in $(seq $start $end); do
     curl -d "{\"method\":\"eth_getBlockByNumber\",\"params\":[\"$i\",true],\"id\":1,\"jsonrpc\":\"2.0\"}" \
