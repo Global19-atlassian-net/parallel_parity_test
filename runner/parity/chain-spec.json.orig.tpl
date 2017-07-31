@@ -8,7 +8,7 @@
     "ouroboros": {
       "params": {
         "gasLimitBoundDivisor": "0x400",
-        "pvssMethod": "{{ ouroboros.pvssMethod|default(simple,true) }}",
+        "pvssMethod": "{{ ouroboros.pvssMethod|default("simple",true) }}",
         "stepDuration": "{{ ouroboros.stepDuration|default(5,true) }}",
         "securityParameterK": "{{ ouroboros.securityParameterK|default(60,true) }}",
         "networkWideStartTime": "0x{{ STARTTIME }}",
