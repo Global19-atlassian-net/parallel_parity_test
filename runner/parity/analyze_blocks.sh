@@ -5,6 +5,11 @@ set -eu
 start=$1
 end=$2
 
+[ -f /usr/local/bin/jq ] || {
+  curl -L https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64 > /usr/local/bin/jq
+  chmod a+x /usr/local/bin/jq
+}
+
 parity_endpoint=${PARITY_ENDPOINT:-localhost:8540}
 
 for i in $(seq $start $end); do
