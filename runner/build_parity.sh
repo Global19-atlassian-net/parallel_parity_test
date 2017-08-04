@@ -21,7 +21,7 @@ docker-machine create --driver amazonec2 builder
 eval $(docker-machine env --shell=bash builder)
 
 cd parity
-docker build -t parity_builder .
+docker build --build-arg DATETIME=${DATETIME} --build-arg RUSTVER=${RUSTVER} -t parity_builder .
 mkdir -p out
 docker run --rm --name parity_builder parity_builder
 docker cp parity_builder:/out/parity ./parity/out/parity
