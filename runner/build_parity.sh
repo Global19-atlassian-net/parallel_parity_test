@@ -18,7 +18,7 @@ DATETIME=$(date +'%Y%m%d')
 export AWS_INSTANCE_TYPE=c4.large
 
 docker-machine create --driver amazonec2 builder
-eval $(docker-machine env builder)
+eval $(docker-machine env --shell=bash builder)
 
 cd parity
 docker build -t parity_builder .
