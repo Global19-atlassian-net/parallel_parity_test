@@ -13,3 +13,4 @@ export PARITY_PORT={{ parity_port }}
 export RANDSEED={{ rand_seed }}
 export TRANSACTIONS={{ transactions }}
 export CHUNKS={{ chunks }}
+export RUSTVER={{ rust_ver }}
