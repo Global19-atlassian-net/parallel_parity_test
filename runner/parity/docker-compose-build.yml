@@ -1,0 +1,12 @@
+version: '2'
+services:
+  parity_builder:
+    image: parity_builder
+    build:
+      context: .
+      dockerfile: Dockerfile  
+      args:
+        - DATETIME=$DATETIME
+        - RUSTVER=$RUSTVER
+
+
