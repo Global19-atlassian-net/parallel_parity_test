@@ -1,8 +1,5 @@
 
-Build Parity:
-
-    
-
+  
 Set up the Runner, this is the main C&C node:
 
     docker build -t runner .
@@ -16,9 +13,13 @@ Subsequent:
     docker start runner
     docker exec -it runner bash
 
-Set the parameters:
+Build Parity:
 
     cd runner/
+    ./build_parity.sh
+
+Set the parameters for the test:
+
     vi default.yml
     
 Choose number of nodes (and change any other parameters):
