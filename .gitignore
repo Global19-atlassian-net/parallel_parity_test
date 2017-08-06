@@ -8,3 +8,4 @@ runner/parity/config.toml
 runner/parity/generated_configs/bulk_configs.sh
 runner/parity/generated_configs/ouro*
 runner/parity/rpc-generator-config.json
+runner/parity/generated_configs/bulk_configs.sh
