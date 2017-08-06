@@ -17,13 +17,16 @@ DATETIME=$(date +'%Y%m%d')
 
 export AWS_INSTANCE_TYPE=c4.large
 
+set +e 
 docker-machine create --driver amazonec2 builder
+set -e
 eval $(docker-machine env --shell=bash builder)
 
 cd parity
 docker build --build-arg DATETIME=${DATETIME} --build-arg RUSTVER=${RUSTVER} -t parity_builder .
 mkdir -p out
+docker rm parity_builder
 docker run --name parity_builder parity_builder
-docker cp parity_builder:/out/parity ./parity/out/parity
+docker cp parity_builder:/parity/target/release/parity ./parity/out/
 
 docker-machine rm -y builder

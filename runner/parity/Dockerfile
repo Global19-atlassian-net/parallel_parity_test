@@ -15,5 +15,4 @@ RUN git checkout ouroboros
 
 VOLUME /out
 CMD export PATH=$PATH:/root/.cargo/bin &&\
-    cargo build --release &&\
-    cp target/release/parity /out
+    cargo build --release
