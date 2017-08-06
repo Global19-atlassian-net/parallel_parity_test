@@ -12,8 +12,8 @@ variables:
   transactions: 10000
   chunks: 1000
   projectname: ouroboros
-  time_offset: 30
   parity_port: 8540
+  tx_queue_size: 1024
   aws:
     concurrency: 2
     nodes: 4

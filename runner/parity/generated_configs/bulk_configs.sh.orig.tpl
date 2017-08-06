@@ -34,6 +34,7 @@ engine_signer = "{{ node_list[n] }}"
 reseal_on_txs = "none"
 usd_per_tx = "0"
 force_sealing = true
+tx_queue_size = {{ tx_queue_size }}
 EOF
 
 cat > {{ projectname }}-node{{ n }}/stakeholder_setup.json << EOF
