@@ -8,7 +8,7 @@ cd $DIR
 
 source ./globals.sh
 
-{% for n in range(aws.nodes) %}
+{% for n in range(1) %}
 {% set othernodes = [] %}
 {% for i in range(aws.nodes) %}
 {% if i == n %}
