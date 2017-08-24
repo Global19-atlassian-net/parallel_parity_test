@@ -6,17 +6,17 @@ variables:
   rand_seed: 432753976
   #Don't comment the following key, leave blank or add values
   ouroboros:
-#    pvssMethod: simple  
-#    stepDuration: 3
-#    securityParameterK: 10
-  transactions: 10000
-  chunks: 1000
+    pvssMethod: simple
+    stepDuration: 10
+    securityParameterK: 5
+  transactions: 650000
+  chunks: 20
   projectname: ouroboros
   parity_port: 8540
-  tx_queue_size: 1024
+  tx_queue_size: 8192
   aws:
-    concurrency: 2
-    nodes: 4
+    concurrency: 20
+    nodes: 40
 #    type: c4.2xlarge
     region: us-east-1
     vpc: vpc-ad157ed4

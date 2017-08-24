@@ -10,6 +10,8 @@ base_path = "node"
 
 [network]
 port = 30300
+min_peers = 39
+max_peers = 50
 
 [rpc]
 port = 8540
