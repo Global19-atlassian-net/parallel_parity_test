@@ -9,6 +9,7 @@ for i in /tmp/par*
 do 
   echo $i
   curl --data @${i} -H "Content-Type: application/json" -X POST localhost:8540
+  sleep 1 # Limit the transactions to avoid overwhelming the servers
 done
 
 rm /tmp/par*
